@@ -1,0 +1,194 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://Asset/tilemap.png" type="Texture" id=2]
+[ext_resource path="res://Main.gd" type="Script" id=3]
+[ext_resource path="res://Enemy.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Asset/comic_sans_bold.ttf" type="DynamicFontData" id=5]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
+
+[sub_resource type="TileSet" id=2]
+0/name = "tilemap.png 0"
+0/texture = ExtResource( 2 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 64, 64 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 1 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "tilemap.png 1"
+1/texture = ExtResource( 2 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 64, 0, 64, 64 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 31, 31 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 45
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 49
+font_data = ExtResource( 5 )
+
+[node name="Main" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 2 )
+collision_layer = 2
+collision_mask = 2
+format = 1
+tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 16, 0, 0, 17, 0, 0, 18, 0, 0, 19, 0, 0, 20, 0, 0, 21, 0, 0, 22, 0, 0, 23, 0, 0, 24, 0, 0, 25, 0, 0, 26, 0, 0, 27, 0, 0, 28, 0, 0, 29, 0, 0, 65536, 0, 0, 65537, 1, 0, 65538, 1, 0, 65539, 1, 0, 65540, 1, 0, 65541, 1, 0, 65542, 1, 0, 65543, 1, 0, 65544, 1, 0, 65545, 1, 0, 65546, 1, 0, 65547, 1, 0, 65548, 1, 0, 65549, 1, 0, 65550, 1, 0, 65551, 1, 0, 65552, 1, 0, 65553, 1, 0, 65554, 1, 0, 65555, 1, 0, 65556, 1, 0, 65557, 1, 0, 65558, 1, 0, 65559, 1, 0, 65560, 1, 0, 65561, 1, 0, 65562, 1, 0, 65563, 1, 0, 65564, 1, 0, 65565, 0, 0, 131072, 0, 0, 131073, 1, 0, 131074, 1, 0, 131075, 1, 0, 131076, 1, 0, 131077, 1, 0, 131078, 1, 0, 131079, 1, 0, 131080, 0, 0, 131081, 1, 0, 131082, 1, 0, 131083, 1, 0, 131084, 0, 0, 131085, 1, 0, 131086, 1, 0, 131087, 1, 0, 131088, 1, 0, 131089, 1, 0, 131090, 1, 0, 131091, 1, 0, 131092, 1, 0, 131093, 1, 0, 131094, 1, 0, 131095, 1, 0, 131096, 1, 0, 131097, 1, 0, 131098, 1, 0, 131099, 1, 0, 131100, 1, 0, 131101, 0, 0, 196608, 0, 0, 196609, 1, 0, 196610, 1, 0, 196611, 1, 0, 196612, 0, 0, 196613, 1, 0, 196614, 1, 0, 196615, 1, 0, 196616, 0, 0, 196617, 1, 0, 196618, 1, 0, 196619, 1, 0, 196620, 1, 0, 196621, 1, 0, 196622, 1, 0, 196623, 1, 0, 196624, 1, 0, 196625, 0, 0, 196626, 0, 0, 196627, 1, 0, 196628, 1, 0, 196629, 1, 0, 196630, 1, 0, 196631, 0, 0, 196632, 1, 0, 196633, 1, 0, 196634, 1, 0, 196635, 1, 0, 196636, 1, 0, 196637, 0, 0, 262144, 0, 0, 262145, 1, 0, 262146, 1, 0, 262147, 0, 0, 262148, 0, 0, 262149, 1, 0, 262150, 1, 0, 262151, 1, 0, 262152, 1, 0, 262153, 1, 0, 262154, 1, 0, 262155, 1, 0, 262156, 1, 0, 262157, 1, 0, 262158, 1, 0, 262159, 1, 0, 262160, 1, 0, 262161, 1, 0, 262162, 0, 0, 262163, 1, 0, 262164, 1, 0, 262165, 1, 0, 262166, 1, 0, 262167, 1, 0, 262168, 1, 0, 262169, 1, 0, 262170, 1, 0, 262171, 1, 0, 262172, 1, 0, 262173, 0, 0, 327680, 0, 0, 327681, 1, 0, 327682, 1, 0, 327683, 1, 0, 327684, 1, 0, 327685, 1, 0, 327686, 1, 0, 327687, 1, 0, 327688, 1, 0, 327689, 1, 0, 327690, 1, 0, 327691, 1, 0, 327692, 1, 0, 327693, 1, 0, 327694, 1, 0, 327695, 1, 0, 327696, 1, 0, 327697, 1, 0, 327698, 1, 0, 327699, 1, 0, 327700, 1, 0, 327701, 1, 0, 327702, 1, 0, 327703, 1, 0, 327704, 1, 0, 327705, 1, 0, 327706, 1, 0, 327707, 1, 0, 327708, 1, 0, 327709, 0, 0, 393216, 0, 0, 393217, 1, 0, 393218, 1, 0, 393219, 1, 0, 393220, 1, 0, 393221, 1, 0, 393222, 1, 0, 393223, 1, 0, 393224, 0, 0, 393225, 1, 0, 393226, 1, 0, 393227, 1, 0, 393228, 1, 0, 393229, 1, 0, 393230, 1, 0, 393231, 1, 0, 393232, 1, 0, 393233, 1, 0, 393234, 1, 0, 393235, 1, 0, 393236, 1, 0, 393237, 0, 0, 393238, 1, 0, 393239, 1, 0, 393240, 1, 0, 393241, 1, 0, 393242, 0, 0, 393243, 1, 0, 393244, 1, 0, 393245, 0, 0, 458752, 0, 0, 458753, 1, 0, 458754, 1, 0, 458755, 1, 0, 458756, 1, 0, 458757, 1, 0, 458758, 1, 0, 458759, 1, 0, 458760, 1, 0, 458761, 1, 0, 458762, 1, 0, 458763, 1, 0, 458764, 1, 0, 458765, 0, 0, 458766, 1, 0, 458767, 1, 0, 458768, 1, 0, 458769, 1, 0, 458770, 1, 0, 458771, 1, 0, 458772, 1, 0, 458773, 1, 0, 458774, 1, 0, 458775, 1, 0, 458776, 1, 0, 458777, 1, 0, 458778, 1, 0, 458779, 1, 0, 458780, 1, 0, 458781, 0, 0, 524288, 0, 0, 524289, 1, 0, 524290, 1, 0, 524291, 1, 0, 524292, 1, 0, 524293, 0, 0, 524294, 0, 0, 524295, 1, 0, 524296, 1, 0, 524297, 1, 0, 524298, 1, 0, 524299, 1, 0, 524300, 0, 0, 524301, 1, 0, 524302, 1, 0, 524303, 1, 0, 524304, 1, 0, 524305, 1, 0, 524306, 1, 0, 524307, 1, 0, 524308, 1, 0, 524309, 1, 0, 524310, 1, 0, 524311, 1, 0, 524312, 1, 0, 524313, 1, 0, 524314, 1, 0, 524315, 1, 0, 524316, 1, 0, 524317, 0, 0, 589824, 0, 0, 589825, 1, 0, 589826, 1, 0, 589827, 1, 0, 589828, 1, 0, 589829, 1, 0, 589830, 1, 0, 589831, 1, 0, 589832, 1, 0, 589833, 1, 0, 589834, 1, 0, 589835, 1, 0, 589836, 1, 0, 589837, 1, 0, 589838, 1, 0, 589839, 1, 0, 589840, 1, 0, 589841, 1, 0, 589842, 1, 0, 589843, 1, 0, 589844, 0, 0, 589845, 1, 0, 589846, 1, 0, 589847, 1, 0, 589848, 0, 0, 589849, 1, 0, 589850, 1, 0, 589851, 1, 0, 589852, 1, 0, 589853, 0, 0, 655360, 0, 0, 655361, 1, 0, 655362, 1, 0, 655363, 0, 0, 655364, 1, 0, 655365, 1, 0, 655366, 1, 0, 655367, 1, 0, 655368, 1, 0, 655369, 0, 0, 655370, 1, 0, 655371, 1, 0, 655372, 1, 0, 655373, 1, 0, 655374, 1, 0, 655375, 1, 0, 655376, 0, 0, 655377, 1, 0, 655378, 1, 0, 655379, 1, 0, 655380, 0, 0, 655381, 1, 0, 655382, 1, 0, 655383, 1, 0, 655384, 1, 0, 655385, 1, 0, 655386, 1, 0, 655387, 1, 0, 655388, 1, 0, 655389, 0, 0, 720896, 0, 0, 720897, 1, 0, 720898, 1, 0, 720899, 1, 0, 720900, 1, 0, 720901, 1, 0, 720902, 1, 0, 720903, 1, 0, 720904, 1, 0, 720905, 1, 0, 720906, 1, 0, 720907, 1, 0, 720908, 1, 0, 720909, 1, 0, 720910, 1, 0, 720911, 1, 0, 720912, 1, 0, 720913, 1, 0, 720914, 1, 0, 720915, 1, 0, 720916, 1, 0, 720917, 1, 0, 720918, 1, 0, 720919, 1, 0, 720920, 1, 0, 720921, 1, 0, 720922, 1, 0, 720923, 1, 0, 720924, 1, 0, 720925, 0, 0, 786432, 0, 0, 786433, 1, 0, 786434, 1, 0, 786435, 1, 0, 786436, 1, 0, 786437, 1, 0, 786438, 1, 0, 786439, 1, 0, 786440, 1, 0, 786441, 1, 0, 786442, 1, 0, 786443, 1, 0, 786444, 1, 0, 786445, 1, 0, 786446, 1, 0, 786447, 1, 0, 786448, 1, 0, 786449, 1, 0, 786450, 1, 0, 786451, 1, 0, 786452, 1, 0, 786453, 1, 0, 786454, 1, 0, 786455, 1, 0, 786456, 1, 0, 786457, 1, 0, 786458, 1, 0, 786459, 1, 0, 786460, 1, 0, 786461, 0, 0, 851968, 0, 0, 851969, 0, 0, 851970, 0, 0, 851971, 0, 0, 851972, 0, 0, 851973, 0, 0, 851974, 0, 0, 851975, 0, 0, 851976, 0, 0, 851977, 0, 0, 851978, 0, 0, 851979, 0, 0, 851980, 0, 0, 851981, 0, 0, 851982, 0, 0, 851983, 0, 0, 851984, 0, 0, 851985, 0, 0, 851986, 0, 0, 851987, 0, 0, 851988, 0, 0, 851989, 0, 0, 851990, 0, 0, 851991, 0, 0, 851992, 0, 0, 851993, 0, 0, 851994, 0, 0, 851995, 0, 0, 851996, 0, 0, 851997, 0, 0 )
+
+[node name="Target_Area" type="Node2D" parent="."]
+
+[node name="Primary" type="Area2D" parent="Target_Area"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Target_Area/Primary"]
+
+[node name="Polygon2D" type="Polygon2D" parent="Target_Area/Primary"]
+color = Color( 1, 0, 0, 0.313726 )
+
+[node name="Secondary" type="Area2D" parent="Target_Area"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Target_Area/Secondary"]
+
+[node name="Polygon2D" type="Polygon2D" parent="Target_Area/Secondary"]
+color = Color( 1, 0, 1, 0.313726 )
+
+[node name="Enemy" type="Node2D" parent="."]
+
+[node name="Enemy" parent="Enemy" instance=ExtResource( 4 )]
+position = Vector2( 394, 130 )
+
+[node name="Enemy2" parent="Enemy" instance=ExtResource( 4 )]
+position = Vector2( 1106, 443 )
+
+[node name="Enemy3" parent="Enemy" instance=ExtResource( 4 )]
+position = Vector2( 186, 494 )
+
+[node name="Enemy4" parent="Enemy" instance=ExtResource( 4 )]
+position = Vector2( 1328, 185 )
+
+[node name="Enemy5" parent="Enemy" instance=ExtResource( 4 )]
+position = Vector2( 426, 460 )
+
+[node name="Enemy6" parent="Enemy" instance=ExtResource( 4 )]
+position = Vector2( 626, 499 )
+
+[node name="Enemy7" parent="Enemy" instance=ExtResource( 4 )]
+position = Vector2( 845, 306 )
+
+[node name="Enemy8" parent="Enemy" instance=ExtResource( 4 )]
+position = Vector2( 417, 720 )
+
+[node name="Enemy9" parent="Enemy" instance=ExtResource( 4 )]
+position = Vector2( 845, 740 )
+
+[node name="Enemy10" parent="Enemy" instance=ExtResource( 4 )]
+position = Vector2( 954, 245 )
+
+[node name="Enemy11" parent="Enemy" instance=ExtResource( 4 )]
+position = Vector2( 450, 232 )
+
+[node name="Enemy12" parent="Enemy" instance=ExtResource( 4 )]
+position = Vector2( 409, 338 )
+
+[node name="Enemy13" parent="Enemy" instance=ExtResource( 4 )]
+position = Vector2( 316, 418 )
+
+[node name="Enemy14" parent="Enemy" instance=ExtResource( 4 )]
+position = Vector2( 533, 582 )
+
+[node name="Enemy15" parent="Enemy" instance=ExtResource( 4 )]
+position = Vector2( 686, 178 )
+
+[node name="Enemy16" parent="Enemy" instance=ExtResource( 4 )]
+position = Vector2( 764, 428 )
+
+[node name="Enemy17" parent="Enemy" instance=ExtResource( 4 )]
+position = Vector2( 702, 597 )
+
+[node name="Player" type="KinematicBody2D" parent="."]
+position = Vector2( 634, 320 )
+collision_mask = 3
+
+[node name="Icon" type="Sprite" parent="Player"]
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource( 3 )
+
+[node name="Spell_Bar" type="HBoxContainer" parent="."]
+margin_left = 115.0
+margin_top = 887.0
+margin_right = 2021.0
+margin_bottom = 1028.0
+custom_constants/separation = 80
+alignment = 1
+
+[node name="Single_Target" type="Button" parent="Spell_Bar"]
+margin_left = 244.0
+margin_top = 35.0
+margin_right = 553.0
+margin_bottom = 105.0
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 4 )
+text = "Single Target"
+
+[node name="Ranged_AOE" type="Button" parent="Spell_Bar"]
+margin_left = 633.0
+margin_top = 35.0
+margin_right = 915.0
+margin_bottom = 105.0
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 4 )
+text = "Ranged AOE"
+
+[node name="Swivel_Cone" type="Button" parent="Spell_Bar"]
+margin_left = 995.0
+margin_top = 35.0
+margin_right = 1262.0
+margin_bottom = 105.0
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 4 )
+text = "Swivel Cone"
+
+[node name="Label" type="Label" parent="Spell_Bar"]
+margin_left = 1342.0
+margin_right = 1661.0
+margin_bottom = 141.0
+custom_fonts/font = SubResource( 5 )
+text = "FPS: 0
+Esc to Cancel"
+
+[connection signal="input_event" from="Target_Area/Primary" to="." method="target_area_input"]
+[connection signal="mouse_entered" from="Target_Area/Primary" to="." method="_on_Target_Area_mouse_entered"]
+[connection signal="mouse_exited" from="Target_Area/Primary" to="." method="_on_Target_Area_mouse_exited"]
