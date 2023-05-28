@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://wb7b12htur4g"]
+
+[ext_resource type="Texture2D" uid="uid://bcx8ao4sgsqyt" path="res://Material/Planks/Planks020_1K_Color.jpg" id="1_mihou"]
+
+[resource]
+albedo_texture = ExtResource("1_mihou")
+uv1_scale = Vector3(0.25, 0.25, 0.25)
+uv1_triplanar = true

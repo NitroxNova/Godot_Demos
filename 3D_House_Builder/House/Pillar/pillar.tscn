@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://b2cgg0gehx5sy"]
+
+[ext_resource type="Script" path="res://House/Pillar/pillar.gd" id="1_whtra"]
+
+[node name="Pillar" type="Node3D"]
+script = ExtResource("1_whtra")
+
+[node name="Mesh" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)

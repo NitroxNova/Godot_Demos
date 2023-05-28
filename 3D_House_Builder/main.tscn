@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://bkpvb33dmrm0j"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_3q6pv"]
+[ext_resource type="Material" uid="uid://l2jolkvknn8b" path="res://Material/Grass/material_3d.tres" id="1_ftb8n"]
+[ext_resource type="Resource" uid="uid://b7ujqot6l8ijp" path="res://Blueprints/2_story_brick.tres" id="2_5b1c5"]
+
+[sub_resource type="Environment" id="Environment_yr4y3"]
+background_energy_multiplier = 16.0
+
+[node name="Main" type="Node3D"]
+script = ExtResource("1_3q6pv")
+house_config = ExtResource("2_5b1c5")
+
+[node name="Grass" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+size = Vector3(50, 1, 50)
+material = ExtResource("1_ftb8n")
+
+[node name="House" type="Node3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.153176, 0.988199, 0, -0.988199, 0.153176, 0, 22.6083, 0)
+environment = SubResource("Environment_yr4y3")
+
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]

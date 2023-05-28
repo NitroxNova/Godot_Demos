@@ -1,0 +1,180 @@
+[gd_resource type="Resource" script_class="House_Config" load_steps=32 format=3 uid="uid://b7ujqot6l8ijp"]
+
+[ext_resource type="Material" uid="uid://dcjxc15k81xrl" path="res://Material/Bricks/material_3d.tres" id="1_eoadj"]
+[ext_resource type="Script" path="res://House/Pillar/Pillar_Config.gd" id="2_u4dqw"]
+[ext_resource type="Material" uid="uid://wb7b12htur4g" path="res://Material/Planks/material_3d.tres" id="3_ttmps"]
+[ext_resource type="Script" path="res://House/House_Config.gd" id="4_ta3lu"]
+[ext_resource type="Material" uid="uid://bi4o5cqdj3n2x" path="res://Material/Blue_Stripes/material_3d.tres" id="5_x2wt1"]
+[ext_resource type="Script" path="res://House/Wall/Wall_Config.gd" id="6_xplo5"]
+[ext_resource type="Script" path="res://House/Window/Window_Config.gd" id="7_62fsi"]
+
+[sub_resource type="Resource" id="Resource_p00ap"]
+script = ExtResource("2_u4dqw")
+position = Vector3(5, 0, 2)
+height = 5.0
+width = 1.0
+material = ExtResource("1_eoadj")
+
+[sub_resource type="Resource" id="Resource_2qkws"]
+script = ExtResource("2_u4dqw")
+position = Vector3(5, 0, -8)
+height = 5.0
+width = 1.0
+material = ExtResource("1_eoadj")
+
+[sub_resource type="Resource" id="Resource_hqy86"]
+script = ExtResource("2_u4dqw")
+position = Vector3(-7, 0, -5)
+height = 5.0
+width = 1.0
+material = ExtResource("1_eoadj")
+
+[sub_resource type="Resource" id="Resource_vlw34"]
+script = ExtResource("2_u4dqw")
+position = Vector3(-3, 0, 4)
+height = 5.0
+width = 1.0
+material = ExtResource("1_eoadj")
+
+[sub_resource type="Resource" id="Resource_5ef4j"]
+script = ExtResource("2_u4dqw")
+position = Vector3(5, 5, 2)
+height = 4.0
+width = 0.5
+material = ExtResource("3_ttmps")
+
+[sub_resource type="Resource" id="Resource_rv5sf"]
+script = ExtResource("2_u4dqw")
+position = Vector3(5, 5, -8)
+height = 4.0
+width = 0.5
+material = ExtResource("3_ttmps")
+
+[sub_resource type="Resource" id="Resource_8i0fe"]
+script = ExtResource("2_u4dqw")
+position = Vector3(-7, 5, -5)
+height = 4.0
+width = 0.5
+material = ExtResource("3_ttmps")
+
+[sub_resource type="Resource" id="Resource_7bolp"]
+script = ExtResource("7_62fsi")
+horizontal_position = 0.6
+vertical_position = 0.6
+
+[sub_resource type="Resource" id="Resource_ia6er"]
+script = ExtResource("7_62fsi")
+horizontal_position = 0.45
+vertical_position = 0.6
+
+[sub_resource type="Resource" id="Resource_5y214"]
+script = ExtResource("6_xplo5")
+pillar_1 = 0
+pillar_2 = 1
+width = 1.0
+windows = Array[ExtResource("7_62fsi")]([SubResource("Resource_7bolp"), SubResource("Resource_ia6er")])
+material = ExtResource("1_eoadj")
+inner_material = ExtResource("5_x2wt1")
+
+[sub_resource type="Resource" id="Resource_krea3"]
+script = ExtResource("7_62fsi")
+horizontal_position = 0.5
+vertical_position = 0.5
+
+[sub_resource type="Resource" id="Resource_d2i3w"]
+script = ExtResource("6_xplo5")
+pillar_1 = 1
+pillar_2 = 2
+width = 1.0
+windows = Array[ExtResource("7_62fsi")]([SubResource("Resource_krea3")])
+material = ExtResource("1_eoadj")
+inner_material = ExtResource("3_ttmps")
+
+[sub_resource type="Resource" id="Resource_ec647"]
+script = ExtResource("6_xplo5")
+pillar_1 = 2
+pillar_2 = 3
+width = 1.0
+windows = Array[ExtResource("7_62fsi")]([])
+material = ExtResource("1_eoadj")
+inner_material = ExtResource("3_ttmps")
+
+[sub_resource type="Resource" id="Resource_soipr"]
+script = ExtResource("7_62fsi")
+horizontal_position = 0.5
+vertical_position = 0.5
+
+[sub_resource type="Resource" id="Resource_pbq0f"]
+script = ExtResource("6_xplo5")
+pillar_1 = 3
+pillar_2 = 0
+width = 1.0
+windows = Array[ExtResource("7_62fsi")]([SubResource("Resource_soipr")])
+material = ExtResource("1_eoadj")
+inner_material = ExtResource("5_x2wt1")
+
+[sub_resource type="Resource" id="Resource_tbu1s"]
+script = ExtResource("6_xplo5")
+pillar_1 = 1
+pillar_2 = 3
+width = 0.5
+windows = Array[ExtResource("7_62fsi")]([])
+material = ExtResource("3_ttmps")
+inner_material = ExtResource("5_x2wt1")
+
+[sub_resource type="Resource" id="Resource_y3cso"]
+script = ExtResource("6_xplo5")
+pillar_1 = 4
+pillar_2 = 5
+width = 1.0
+windows = Array[ExtResource("7_62fsi")]([])
+material = ExtResource("3_ttmps")
+inner_material = ExtResource("5_x2wt1")
+
+[sub_resource type="Resource" id="Resource_rsssu"]
+script = ExtResource("7_62fsi")
+horizontal_position = 0.5
+vertical_position = 0.5
+
+[sub_resource type="Resource" id="Resource_l5rjj"]
+script = ExtResource("7_62fsi")
+horizontal_position = 0.3
+vertical_position = 0.5
+
+[sub_resource type="Resource" id="Resource_j2bud"]
+script = ExtResource("7_62fsi")
+horizontal_position = 0.4
+vertical_position = 0.5
+
+[sub_resource type="Resource" id="Resource_co550"]
+script = ExtResource("6_xplo5")
+pillar_1 = 5
+pillar_2 = 6
+width = 1.0
+windows = Array[ExtResource("7_62fsi")]([SubResource("Resource_rsssu"), SubResource("Resource_l5rjj"), SubResource("Resource_j2bud")])
+material = ExtResource("3_ttmps")
+inner_material = ExtResource("5_x2wt1")
+
+[sub_resource type="Resource" id="Resource_lqpr3"]
+script = ExtResource("7_62fsi")
+horizontal_position = 0.5
+vertical_position = 0.5
+
+[sub_resource type="Resource" id="Resource_sbcap"]
+script = ExtResource("7_62fsi")
+horizontal_position = 0.7
+vertical_position = 0.5
+
+[sub_resource type="Resource" id="Resource_yu3sp"]
+script = ExtResource("6_xplo5")
+pillar_1 = 6
+pillar_2 = 4
+width = 1.0
+windows = Array[ExtResource("7_62fsi")]([SubResource("Resource_lqpr3"), SubResource("Resource_sbcap")])
+material = ExtResource("3_ttmps")
+inner_material = ExtResource("5_x2wt1")
+
+[resource]
+script = ExtResource("4_ta3lu")
+pillars = Array[ExtResource("2_u4dqw")]([SubResource("Resource_p00ap"), SubResource("Resource_2qkws"), SubResource("Resource_hqy86"), SubResource("Resource_vlw34"), SubResource("Resource_5ef4j"), SubResource("Resource_rv5sf"), SubResource("Resource_8i0fe")])
+walls = Array[ExtResource("6_xplo5")]([SubResource("Resource_5y214"), SubResource("Resource_d2i3w"), SubResource("Resource_ec647"), SubResource("Resource_pbq0f"), SubResource("Resource_tbu1s"), SubResource("Resource_y3cso"), SubResource("Resource_co550"), SubResource("Resource_yu3sp")])

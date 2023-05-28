@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dnwereidlvrc8"]
+
+[ext_resource type="Script" path="res://House/Wall/wall.gd" id="1_wtsx1"]
+[ext_resource type="Material" uid="uid://dcjxc15k81xrl" path="res://Material/Bricks/material_3d.tres" id="2_mbyjo"]
+[ext_resource type="Material" uid="uid://wb7b12htur4g" path="res://Material/Planks/material_3d.tres" id="3_y60ui"]
+
+[node name="Wall" type="CSGCombiner3D"]
+script = ExtResource("1_wtsx1")
+
+[node name="Mesh" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+size = Vector3(1, 4, 10)
+material = ExtResource("2_mbyjo")
+
+[node name="Inner" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 2, 0)
+size = Vector3(0, 4, 10)
+material = ExtResource("3_y60ui")

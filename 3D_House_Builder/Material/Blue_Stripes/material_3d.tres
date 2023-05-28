@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bi4o5cqdj3n2x"]
+
+[ext_resource type="Texture2D" uid="uid://b33im28yvo8vt" path="res://Asset/Material/Blue_Stripes/wallpaper.png" id="1_o5m54"]
+
+[resource]
+albedo_texture = ExtResource("1_o5m54")
+uv1_triplanar = true
