@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bujyhc86a0ngy"]
+
+[ext_resource type="Script" path="res://Main.gd" id="1_nvrnr"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_nvrnr")
+
+[node name="Camera2D" type="Camera2D" parent="."]
